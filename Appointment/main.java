@@ -16,16 +16,16 @@ public class Main{
             String name = sc.nextLine();
 
             System.out.println("Enter doctor name");
-            String doctorname = sc.nextLine();
+            String doctorName = sc.nextLine();
 
             System.out.println("Enter appointment time(ex : 15:00)");
             String time = sc.nextLine();
 
-            a[i] = new Appointment(name, doctorname, time);
+            a[i] = new Appointment(name, doctorName, time);
         }
-        System.out.println("Infotmation about all appointments");
+        System.out.println("Information about all appointments");
         for(Appointment s : a){
-            System.out.println("\nPatient's name: " + s.name + " doctor's name: " + s.doctorname + " time: " + s.time);
+            System.out.println("\nPatient's name: " + s.name + " doctor's name: " + s.doctorName + " time: " + s.time);
         }
 
         System.out.println("\nEnter the patient's name to search");
@@ -36,7 +36,7 @@ public class Main{
         for(int i = 0; i < n ; i++) {
             if (search.equalsIgnoreCase(a[i].name)) {
                 System.out.println("\nPatient information found: ");
-                System.out.println(a[i].name + " meets Dr " + a[i].doctorname + " at " + a[i].time);
+                System.out.println(a[i].name + " meets Dr " + a[i].doctorName + " at " + a[i].time);
                 found = true;
                 break;
             }
